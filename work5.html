@@ -1,0 +1,170 @@
+<html>
+
+<head>
+    <!-- for optimal display on high DPI devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- the viewer container must have a defined size -->
+    <div class="alert alert-primary"> Web VR 360</div>
+    <!--div class="card-body text-center" ><a class="btn btn-outline-primary" href="index.html" role="button">กลับหน้าหลัก</a> </!--div> <br> -->
+    <div id="viewer" style="width: 100vw; height: 100vh;"></div>
+    
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- the viewer container must have a defined size -->
+    <div class="alert alert-primary"> Web VR 360</div>
+    <div id="audioContainer">
+        <audio id="audioPlayer" controls autoplay>
+            <source src="your-audio-file.mp3" type="audio1.mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div id="viewer" style="width: 100vw; height: 100vh;"></div>
+
+    <script type="text/template" id="a1">
+        <!-- your content for marker 1 -->
+    </script>
+
+    <!-- Add other marker templates here -->
+
+    <script>
+    
+    
+    <script type="text/template" id="a1">
+        <div class='alert alert-primary'>ยีราฟ</div>
+        (ชื่อวิทยาศาสตร์: Giraffa)
+        <img src='img01/a1.png' width="100%">
+        <div>
+            ยีราฟ เป็นสัตว์ที่กินพืช กินได้ทั้งหญ้าที่ขึ้นอยู่กับพื้น และพุ่มไม้สูง ๆ 
+            โดยเฉพาะพุ่มไม้ประเภทอาเคเชียหรือกระถินณรงค์ที่มีหนามแหลม มีรสฝาด และมีพิษ 
+            แต่ยีราฟก็สามารถกินได้อย่างไม่มีปัญหา เพราะมีลิ้นที่ยาวถึง 45-47 เซนติเมตร และมีความหนาสาก 
+            ใช้ตวัดกินได้โดยไม่ได้รับอันตราย และทนทานต่อสารพิษได้ในระดับหนึ่ง แต่เมื่อยีราฟจะดื่มน้ำหรือกินอาหารที่อยู่พื้นล่าง 
+            ต้องถ่างขาทั้งคู่หน้าออก และก้มคอลง เพราะมีกระดูกที่ข้อต่อต้นคอเพียง 7 ข้อเท่านั้น นับเป็นช่วงที่ยีราฟจะได้รับอันตราย
+            จากสัตว์กินเนื้อที่บุกจู่โจมได้ เพราะเป็นช่วงที่อยู่ในท่าที่ไม่คล่องตัว วัน ๆ หนึ่งยีราฟจะกินอาหารเฉลี่ยวันละ 20-30 กิโลกรัม 
+            ขณะที่นอนหลับในท่ายืนเพียงวันละ 2 นาที-2 ชั่วโมงเท่านั้น ยีราฟเมื่อวิ่ง จะวิ่งได้ไม่นานนักเนื่องจากหัวใจจะสูบฉีดเลือดอย่างหนัก 
+            และเมื่อวิ่งจะต่างจากสัตว์ชนิดอื่น ๆ เพราะทั้งขาหลังและขาหน้า ที่อยู่ข้างเดียวกัน จะยกขึ้นลงพร้อม ๆ กัน 
+            จึงมีลักษณะการวิ่งแบบควบกระโดดโคลงเคลงไปมา และคอที่ยาวก็จะมีอาการแกว่งไกวไปมาด้วย
+        </div>
+    </script>
+
+    <script type="text/template" id="a2">
+        <div class='alert alert-primary'>ไดโนเสาร์</div>
+        ชื่อวิทยาศาสตร์: Parasaurolophus
+        <img src='img01/a2.png' width="100%">
+        <div>
+            พาราซอโรโลฟัสเป็นแฮโดรซอริดขนาดใหญ่โดยมีขนาดอยู่ที่ 8 - 10 เมตร 
+            ลักษณเด่นของมันก็คือ มีหงอนยาวขนาดใหญ่อยู่บนหัวเพื่อใช้ในการสื่อสารแต่ก็ยังเป็นที่ถกเถียงกันอยู่ 
+            แต่ก็มีนักบรรพชีวินวิทยาหลายคนได้นำเสนอไว้ว่าหงอนบนหัวของมันสามรถใช้ในการสื่อสารหรือส่งเสียงร้อง
+            เพื่อใช้ในการข่มขู่ศัตรูและเรียกคู่ ซึ่งบางทฤษฎีได้เสนอว่า มันอาจจะใช้ในการรักษาอุณหภูมิได้ด้วย 
+            แต่ทฤษฎีหลายๆทฤษฎีจะนำเสนอว่าหงอนของพวกมันสามารถใช้ในการระบุเพศผู้เพศเมียได้ 
+            ซึ่งนั่นก็เป็นลักษณะเด่นของนกและกิ้งก่าโดยทั่วไปอยู่แล้วอีกด้วย 
+        </div>
+    </script>
+
+    <script type="text/template" id="a3">
+        <div class='alert alert-primary'>นกอินทรี</div>
+        (ชื่อวิทยาศาสตร์: Haliaeetus leucocephalus)
+        <img src='img01/a3.png' width="100%">
+        <div>
+            อินทรี เป็นนกจำพวกนกล่าเหยื่อขนาดใหญ่ ในวงศ์ Accipitridae อันดับ Accipitriformes (วงศ์และอันดับเดียวกับ เหยี่ยว) 
+            มีโครงสร้างทางกายภาพที่แข็งแรง ประกอบด้วยโครงกระดูก กล้ามเนื้อ ส่วนต่าง ๆ ขน และกรงเล็บเป็นหลัก 
+            จัดอยู่ในประเภทนกที่ล่าเหยื่อเป็นอาหาร มีขนาด ปีก และ หาง ที่กว้าง ลักษณะปลายปีกแหลมหรือปีกแตก 
+            จะงอยปากงองุ้มเป็นตะขอ อินทรีเป็นนกที่มีลักษณะสวยงาม แข็งแรง สายตาคม บินเร็ว โจมตีแม่นยำ 
+            มองเห็นเป้าหมายได้จากระยะไกล มีเพดานบินตั้งแต่พื้นราบจนถึงความสูง 2,100 เมตร 
+            และจัดได้ว่าเป็นสัตว์ที่มีสายตาดีที่สุดในโลก อีกทั้งยังถือเป็นนกหรือสัตว์ปีกที่มีอายุยืนยาวที่สุดในโลกอีกด้วย 
+            โดยมีอายุได้มากถึง 70 ปี ส่วนใหญ่จะมีสีเข้มและสร้างรังบนหน้าผาที่สูงชัน
+        </div>
+    </script>
+
+    <script type="text/template" id="a4">
+        <div class='alert alert-primary'>ฟุตบอล</div>
+        <img src='img01/a4.png' width="100%">
+        <div>
+        ลูกฟุตบอล เป็นลูกบอลชนิดหนึ่งที่ใช้ในการเล่นกีฬาฟุตบอล ลูกฟุตบอลที่มีมาตราฐานนั้นต้องตรงตามกติกาของฟีฟ่า
+        ฟุตบอลในช่วงแรกนั้นได้มีการคาดการว่าน่าจะเกิดจากการนำกระเพาะปัสสาวะหรือกระเพาะอาหารของสัตว์มาทำซึ่งเมื่อเตะกันมากเกินไป
+        ก็จะทำให้เกิดการแตกได้ จนกระทั่งในช่วงศตวรรษที่ 19 ชาร์ล กู๊ดเยียร์ (Charles Goodyear) ได้ริเริ่มใช้ยางสังเคราะห์ในการผลิตฟุตบอลขึ้น 
+        หลังจากนั้นก็ได้มีการพัฒนารูปแบบ การวิจัยด้านเทคโนโลยี และอื่นๆเพื่อให้ลูกฟุตบอลมีประสิทธิภาพดีขึ้น 
+        </div>
+    </script>
+
+    <script type="text/template" id="a5">
+        <div class='alert alert-primary'>กระต่าย</div>
+        <img src='img01/a5.png' width="100%">
+        <div>
+            กระต่ายเป็นสัตว์เลี้ยงลูกด้วยนมที่มีขนาดเล็ก มีขนปุกปุยทั่วลำตัว มีหางกลมสั้น มีใบหูยาวเมื่อเทียบกับสัตว์อื่น 
+            ซึ่งวิวัฒนาการมาใช้สำหรับฟังเสียงได้เป็นอย่างดี และยังมีประสาทสัมผัสในการดมกลิ่นที่ดีมาก กระต่ายมีขาหน้าที่มี 5 นิ้ว ขาหลังมี 4 นิ้ว 
+            มีสะโพกที่ยาวและทรงพลัง เต็มไปด้วยกล้ามเนื้อ จึงสามารถกระโดดได้เป็นอย่างดี
+        </div>
+    </script>
+
+    <script>
+        const viewer = new PhotoSphereViewer.Viewer({
+            container: document.querySelector('#viewer'),
+            panorama: 'img01/full.jpg',
+            useXmpData: false,
+            plugins: [
+                [PhotoSphereViewer.MarkersPlugin, {
+                    markers: [
+                        {
+                            id: 'm1',
+                            position: { yaw: '40deg', pitch: '0deg' },
+                            imageLayer: 'img01/a1.png',
+                            size: { width: 300*1.5, height: 500*1.5 },
+                            tooltip:"<div class='alert alert-primary'>ยีราฟ</div>",
+                            content:document.getElementById("a1").innerHTML,
+                        },    
+                        {
+                            id: 'm2',
+                            position: { yaw: '-90deg', pitch: '-5deg' },
+                            imageLayer: 'img01/a2.png',
+                            size: { width: 150, height: 200 },
+                            tooltip:"<div class='alert alert-primary'>ไดโนเสาร์</div>",
+                            content:document.getElementById("a2").innerHTML,
+                        },             
+                        {
+                            id: 'm3',
+                            position: { yaw: '165deg', pitch: '20deg' },
+                            imageLayer: 'img01/a3.png',
+                            size: { width: 250, height: 140 },
+                            tooltip:"<div class='alert alert-primary'>นกอินทรี</div>",
+                            content:document.getElementById("a3").innerHTML,
+                        },                                         
+                        {
+                            id: 'm4',
+                            position: { yaw: '-89deg', pitch: '-11deg' },
+                            imageLayer: 'img01/a4.png',
+                            size: { width: 400*0.2, height: 400*0.2 },
+                            tooltip:"<div class='alert alert-primary'>ฟุตบอล</div>",
+                            content:document.getElementById("a4").innerHTML,
+                        },         
+                        {
+                            id: 'm5',
+                            position: { yaw: '220deg', pitch: '-14deg' },
+                            imageLayer: 'img01/a5.png',
+                            size: { width: 443, height: 407 },
+                            tooltip:"<div class='alert alert-primary'>กระต่าย</div>",
+                            content:document.getElementById("a5").innerHTML,
+                        },         
+                    ],
+                }],
+            ],
+
+        });
+    </script>
+</body>
+
+</html>
